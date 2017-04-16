@@ -6,15 +6,19 @@
 </head>
 <body>
 <form method="GET" action="dados.php">
+		
 		<input type="number" name="a" value="Número 1" placeholder="Número 1"/><br/><br/>
 		<input type="number" name="b" value="Número 2" placeholder="Número 2"/><br/><br/>
+		
 		<select name="operacao">
-			<option>Escolha</option>
-			<option>Somar</option>
-			<option>Subtrair</option>
-			<option>Multiplicar</option>
-			<option>Dividir</option>
-		</select><br/><br/>
+			<option value='' selected>Escolha...</option>
+			<option value="somar">Somar</option>
+			<option value="subtrair">Subtrair</option>
+			<option value="multiplicar">Multiplicar</option>
+			<option value="dividir">Dividir</option>
+		</select>
+		<br/>
+		<br/>
 		<input type="submit" value="Calcular"/><br/><br/>
 </body>
 </html>
