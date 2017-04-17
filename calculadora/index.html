@@ -3,12 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Calculadora básica</title>
+	<link href="style.css" rel="stylesheet">
 </head>
 <body>
-<form method="GET" action="dados.php">
+<div class="conteudo">
+		<h1>Calculadora Básica</h1>
+	
+		<form method="GET" action="dados.php">
 		
-		<input type="number" name="a" value="Número 1" placeholder="Número 1"/><br/><br/>
-		<input type="number" name="b" value="Número 2" placeholder="Número 2"/><br/><br/>
+		<input type="number" name="a" value="Número 1" placeholder="Número 1"/><br><br>
+		<input type="number" name="b" value="Número 2" placeholder="Número 2"/><br><br>
 		
 		<select name="operacao">
 			<option value='' selected>Escolha uma Operação</option>
@@ -17,8 +21,9 @@
 			<option value="multiplicar">Multiplicar</option>
 			<option value="dividir">Dividir</option>
 		</select>
-		<br/>
-		<br/>
-		<input type="submit" value="Calcular"/><br/><br/>
+		<br>
+		<br>
+		<input type="submit" value="Calcular"/>
+</div>
 </body>
 </html>
