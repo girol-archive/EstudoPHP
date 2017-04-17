@@ -5,8 +5,6 @@
 	$operacao =  $_GET["operacao"];
 	$result = null;
 
-	var_dump($operacao);
-
 	switch ($operacao) {
 		case 'somar':
 			$result = $a + $b;
@@ -21,6 +19,15 @@
 			break;
 
 		case 'dividir':
+
+			// Switch também suporta ifs! ;)
+			if($b == 0){
+				echo "Não é possível divisão por zero!";
+				echo "<br/>";
+				echo "<a href='index.html'>Voltar</a>";
+				exit();
+			}
+
 			$result = $a / $b;
 			break;
 		
@@ -40,7 +47,7 @@
 	ainda é mostrada. Resolvemos com um if
 	*/ 
 
-	if($result){
+	if($result !== null){ // A importância do null neste caso!
 
 		echo "O resultado é: ".$result;
 		echo "<br/>";
