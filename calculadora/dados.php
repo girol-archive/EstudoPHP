@@ -8,30 +8,18 @@
 	switch ($operacao) {
 		case 'somar':
 			$result = $a + $b;
-			echo "O resultado é: ".$result;
-			echo "<br/>";
-			echo "<a href='index.html'>Voltar</a>";
 			break;
 
 		case 'subtrair':
 			$result = $a - $b;
-			echo "O resultado é: ".$result;
-			echo "<br/>";
-			echo "<a href='index.html'>Voltar</a>";
 			break;
 
 		case 'multiplicar':
 			$result = $a * $b;
-			echo "O resultado é: ".$result;
-			echo "<br/>";
-			echo "<a href='index.html'>Voltar</a>";
 			break;
 
 		case 'dividir':
 			$result = $a / $b;
-			echo "O resultado é: ".$result;
-			echo "<br/>";
-			echo "<a href='index.html'>Voltar</a>";
 			break;
 		
 		default:
@@ -40,3 +28,12 @@
 			echo "<a href='index.html'>Voltar</a>";
 			break;
 	}
+
+	/*
+	Não é necessário repetir o código várias vezes. 
+	A variável $result já está sendo inicializada em cada parte do switch
+	Daí basta mostrá-la uma vez.
+	*/ 
+	echo "O resultado é: ".$result;
+	echo "<br/>";
+	echo "<a href='index.html'>Voltar</a>";
