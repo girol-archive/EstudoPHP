@@ -5,6 +5,8 @@
 	$operacao =  $_GET["operacao"];
 	$result = null;
 
+	var_dump($operacao);
+
 	switch ($operacao) {
 		case 'somar':
 			$result = $a + $b;
@@ -26,14 +28,21 @@
 			echo "Escolha uma das operações";
 			echo "<br/>";
 			echo "<a href='index.html'>Voltar</a>";
-			break;
+			// default não tem break
 	}
 
 	/*
 	Não é necessário repetir o código várias vezes. 
 	A variável $result já está sendo inicializada em cada parte do switch
 	Daí basta mostrá-la uma vez.
+
+	No entanto, se o usuário não escolher nenhuma opção, essa linha
+	ainda é mostrada. Resolvemos com um if
 	*/ 
-	echo "O resultado é: ".$result;
-	echo "<br/>";
-	echo "<a href='index.html'>Voltar</a>";
+
+	if($result){
+
+		echo "O resultado é: ".$result;
+		echo "<br/>";
+		echo "<a href='index.html'>Voltar</a>";
+	}
