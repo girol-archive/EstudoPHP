@@ -3,17 +3,41 @@
 	$a = $_GET["a"];
 	$b = $_GET["b"];
 	$operacao =  $_GET["operacao"];
-	$result = [];
+	$result = null;
 
-	if($operacao == "Somar") {
-		$result = $a + $b;
-	} else if($operacao == "Subtrair") {
-		$result = $a - $b;
-	} else if($operacao == "Multiplicar") {
-		$result = $a * $b;
-	} else($operacao == "Dividir") {
-		$result = $a / $b;
+	switch ($operacao) {
+		case 'somar':
+			$result = $a + $b;
+			echo "O resultado é: ".$result;
+			echo "<br/>";
+			echo "<a href='index.html'>Voltar</a>";
+			break;
+
+		case 'subtrair':
+			$result = $a - $b;
+			echo "O resultado é: ".$result;
+			echo "<br/>";
+			echo "<a href='index.html'>Voltar</a>";
+			break;
+
+		case 'multiplicar':
+			$result = $a * $b;
+			echo "O resultado é: ".$result;
+			echo "<br/>";
+			echo "<a href='index.html'>Voltar</a>";
+			break;
+
+		case 'dividir':
+			$result = $a / $b;
+			echo "O resultado é: ".$result;
+			echo "<br/>";
+			echo "<a href='index.html'>Voltar</a>";
+			break;
+		
+		default:
+			echo "Escolha uma das operações";
+			echo "<br/>";
+			echo "<a href='index.html'>Voltar</a>";
+			break;
 	}
-
-	echo "O resultado é: ".$result;
 ?>
