@@ -5,40 +5,38 @@
 	$operacao =  $_GET["operacao"];
 	$result = null;
 
-
-	if($operacao == "somar") {
-		
-		$result = $a + $b;
-
-	} else if($operacao == "subtrair") {
-
-		$result = $a - $b;
-
-	} else if($operacao == "multiplicar") {
-
-		$result = $a * $b;
-
-	// Aqui não precisa testar de novo, visto que só
-	} else if($operacao == "dividir") {
-
-		if($b == 0){
-			echo "Não é possível dividir por zero!<br>";
+	switch ($operacao) {
+		case 'somar':
+			$result = $a + $b;
+			echo "O resultado é: ".$result;
+			echo "<br/>";
 			echo "<a href='index.html'>Voltar</a>";
-			exit();//encerra o script imediatamente
-		}
+			break;
 
-		$result = $a / $b;
+		case 'subtrair':
+			$result = $a - $b;
+			echo "O resultado é: ".$result;
+			echo "<br/>";
+			echo "<a href='index.html'>Voltar</a>";
+			break;
 
-	// Caso o usuário não escolha nada, mostra mensagem de erro
-	} else {
+		case 'multiplicar':
+			$result = $a * $b;
+			echo "O resultado é: ".$result;
+			echo "<br/>";
+			echo "<a href='index.html'>Voltar</a>";
+			break;
+
+		case 'dividir':
+			$result = $a / $b;
+			echo "O resultado é: ".$result;
+			echo "<br/>";
+			echo "<a href='index.html'>Voltar</a>";
+			break;
 		
-		echo "Escolha uma das operações";
-		echo "<br>";
-		echo "<a href='index.html'>Voltar</a>";
-		exit();//encerra o script imediatamente
+		default:
+			echo "Escolha uma das operações";
+			echo "<br/>";
+			echo "<a href='index.html'>Voltar</a>";
+			break;
 	}
-
-	echo "O resultado é: ". $result;
-	echo "<br>";
-	echo "<a href='index.html'>Calcular novamente</a>";
-
