@@ -1,0 +1,22 @@
+
+h1 {
+	background-color: gray;
+}
+
+button {
+	font-size: 50px;
+	border-radius: 3px;
+	background-color: purple;
+	background: -webkit-linear-gradient(purple, yellow);
+
+}
+
+button:hover {
+	background: green;
+	background: -webkit-linear-gradient(blue, gray);
+}
+
+button:active {
+	color: white;
+	background: black;
+}
